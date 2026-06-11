@@ -1,2 +1,3 @@
 # M3vi
 ...
+Bu bir sohbet botu. Toplama yapailir, gruba join olan kişiyi söyler.
