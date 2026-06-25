@@ -52,7 +52,20 @@ def get_duck_image_url():
     data = res.json()
     return data['url']
 
+import random
 
+@bot.command()
+async def meyve(ctx):
+    meyveler = [
+        "🍎 Elma",
+        "🍌 Muz",
+        "🍓 Çilek",
+        "🍍 Ananas",
+        "🥝 Kiwi",
+        "🍇 Üzüm"
+    ]
+    await ctx.send(f"Bugünün meyvesi: {random.choice(meyveler)}")
+    
 @bot.command('duck')
 async def duck(ctx):
     '''duck komutunu çağırdığımızda, program ordek_resmi_urlsi_al fonksiyonunu çağırır.'''
