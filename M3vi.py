@@ -65,7 +65,36 @@ async def meyve(ctx):
         "🍇 Üzüm"
     ]
     await ctx.send(f"Bugünün meyvesi: {random.choice(meyveler)}")
-    
+
+@bot.command() 
+async def cevre(ctx): 
+    await ctx.send("Çevre, canlı ve cansız varlıkların yaşamları boyunca etkileşim içinde bulundukları fiziki, biyolojik, sosyal ve kültürel ortamdır.")
+
+@bot.command()
+async def atik(ctx):
+    atiklar = [
+        "♻️ Kağıt",
+        "♻️ Cam",
+        "♻️ Metal",
+        "♻️ Plastik",
+        "🗑️ Yağlı kağıt",
+        "🗑️ Seramik"
+    ]
+    await ctx.send("Geri dönüşüm durumu: " + random.choice(atiklar))
+
+@bot.command()
+async def görev(ctx):
+    """Sıfır atık için günlük bir görev verir."""
+    gorevler = [
+        "Bugün plastik şişe yerine mataranı kullan.",
+        "Alışverişe bez çantanla gitmeyi unutma.",
+        "Kağıt atıklarını ayrı bir kutuda biriktir.",
+        "Kullanmadığın elektronik aletlerin fişini çek.",
+        "Bugün tek kullanımlık ürün tüketmemeye çalış."
+    ]
+    secilen_gorev = random.choice(gorevler)
+    await ctx.send(f"🌱 Günlük Sıfır Atık Görevin: {secilen_gorev}")
+
 @bot.command('duck')
 async def duck(ctx):
     '''duck komutunu çağırdığımızda, program ordek_resmi_urlsi_al fonksiyonunu çağırır.'''
